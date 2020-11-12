@@ -44,19 +44,19 @@ console.log(n);
 
 //3. Две переменных...
 
-let int1 = 2;
-let int2 = 3;
+let int1 = 23;
+let int2 = 32;
 
-int1 = (int1 + int1) - 1;
-int2 = int1 - 1;
+int1 = int1 + int2;
+int2 = int1 - int2;
+int1 = int1 - int2;
 
 console.log(int1, int2);
 
-let int3, int4 = 5;
+let [int3, int4] = [5, 5];
 
 console.log(int3, int4);
 
 //почему нельзя задать сразу несколько переменных, анпример:
 // let a, b, c, d = 0, 1, 2, 3
 //что было бы равно a = 0, b = 1, c = 2, d = 3?
-
