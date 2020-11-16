@@ -6,7 +6,7 @@ console.log('1. Вывести в консоль первые 20 элемент�
 
 let range = 1;
 
-for (let i = 2; range < 2**20; i++) {
+for (let i = 10; range < 2**20; i++) {
     range *= 2;
     console.log(range);
 }

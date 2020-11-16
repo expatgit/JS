@@ -44,7 +44,7 @@ console.log(n);
 
 //3. Две переменных...
 
-let int1 = 23;
+let int1 = -23;
 let int2 = 32;
 
 int1 = int1 + int2;

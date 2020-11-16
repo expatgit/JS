@@ -13,7 +13,7 @@ console.log('1. Задача на if else ' +
 
 console.log('\n Ответ:');
 
-let sum = 11301;
+let sum = 9000;
 
 if (sum < 1000) {
     console.log(`скидка не предусмотрена, к оплате: ${sum} `);
