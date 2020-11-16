@@ -48,7 +48,7 @@ section div {
 
 }
 section:hover div {
-    display: flex;
+    display: block;
 
 }
 
@@ -56,4 +56,20 @@ section div:hover {
     background-color: rgba(0,0,0,0.2);
 
     
+}
+
+.task3 a {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.task3 :nth-child(1):hover {
+    color: white;
+}
+
+.task3 :nth-child(2):hover {
+    color: white;
+}
+.task3 :nth-child(3):hover {
+   color: white;
 }
