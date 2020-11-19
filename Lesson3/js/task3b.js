@@ -30,7 +30,7 @@ console.log('2. Создать массив целых чисел произво
     '   Для решения достаточно найти одну пару. <br>\n\n Ответ:\n');
 
 arr = [];
-arr.length = Math.floor(Math.random() * 10);
+arr.length = Math.floor(Math.random() * 100);
 
 while (i < arr.length) {
     arr[0] = Math.floor(Math.random() * 10);
