@@ -2,12 +2,11 @@
 
 //Looping statemnt
 //Циклы
-/*
 let password = null;
 do {
     password = prompt("Введите пароль");
     console.log(password);
-} while (password !== 'admin');*/
+} while (password !== 'admin');
 
 
 // promt - модальное окно, приостанавливает выполнение скрипта, возврашает то, что ввел вользователь (всегда String),
