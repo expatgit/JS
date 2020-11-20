@@ -99,9 +99,17 @@
 {
 
     let year = null;
-    do {
+
+
+
+
+    while (true){
+
+
 
         let year = prompt("Допзадача, бесконечный цикл\nПроверка: високосный год или нет.\n Введите год (например: 1925)");
+
+        if (value === "" || value === null || !isFinite(value)) break;
 
         if (year % 400 === 0) {
             alert("год високосный");
@@ -116,5 +124,6 @@
         }*/
     }
 
-    while (year !== toString());
+
+
 }
