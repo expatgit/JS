@@ -57,9 +57,19 @@ console.log(ending());
         '       Функция возвращает массив, который содержит все числа из диапазона, включая начальное и конечное.\n' +
         '       Например, вызов функции range(1, 10, 2) должен будет вернуть [1, 3, 5, 7, 9]')
 
-    console.log('В процессе выполнения......');
+       console.log('Ответ:');
 
+    function range (min, max, n = 1) {
+        let arrRange = [min];
+        while (min < max-n) {
+            arrRange.push(min += n)
+        } return arrRange
+    }
+
+    console.log(range(1, 10, 2));
 }
+
+
 
 {
 
