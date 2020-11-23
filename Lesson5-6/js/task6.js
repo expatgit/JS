@@ -32,10 +32,13 @@
 
     for (let k of newArr) {
         k+=10;
-        console.log(k);
+        numsArr.pop(newArr[k]);
+
+        console.log(numsArr);
 
     }
     console.log(newArr);
+    console.log(numsArr);
 }
 
 
