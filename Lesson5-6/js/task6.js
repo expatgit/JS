@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 {
     console.log('4. На методы массивов\n' +
         '        \n' +
@@ -11,14 +11,12 @@
         '        ];\n' +
         '        \n' +
         '        1. Увеличить кажый элемент массива на 10\n' +
-        '        2. Создать массив, в который войдут положительные элементы numsArr\n\n')
-
+        '        2. Создать массив, в который войдут положительные элементы numsArr\n')
     let numsArr = [
         [3, 5, -1, 6, 0],
         [56, -9, 111, 6],
         [11, 86, -12],
     ];
-
     let newArr = [];
     for (let i of numsArr) {
 
@@ -27,88 +25,51 @@
 
             newArr.push(i[j]);
         }
-        /* console.log(newArr)*/
+       /!* console.log(newArr)*!/
     }
 
     console.log('конвертнули трехмерный массив в одномерный');
-    /*
-         for (let k of newArr) {
-             k+=10;
-             numsArr.pop(newArr[k]);
 
-             console.log(numsArr);
+    for (let k of newArr) {
+        k+=10;
+        numsArr.pop(newArr[k]);
 
-         }*/
-    console.log(typeof newArr[0]);
-    console.log(typeof numsArr[0]); //Какая прелесть! 8 часов впустую...) К объекту 10 не прибавляется...
-    numsArr = newArr;
-    newArr = newArr.map(function (digit) {
-        return digit + 10;
-    });
+        console.log(numsArr);
 
+    }
     console.log(newArr);
-
-    /*    let numsArr2 = numsArr.map(function (digit) {
-           if (digit > 0) {
-               return digit;
-           }
-
-        }); //мысль остановилась.... надо убрать und из консоли
-
-           console.log(numsArr2);*/
-    for (let i = 0; i < numsArr.length; i++) {
-        if (numsArr[i] < 0) {                  // почему numsArr[i], а не просто i????
-            numsArr.splice(i, 1);
-        }
-
-    }
-    /* for (let i = numsArr.length; i > 0; i--) {
-         if (numsArr[i] < 0) {
-             numsArr.splice(i, 1);
-         }
-
-     }*/
     console.log(numsArr);
+}*/
 
-
+{
+function more18(age) {
+    return age > 18;
 }
 
+function less30(age) {
+    return age < 30;
+}
 
-console.log('5. Написать функцию проверки на спам.\n' +
-    '\n' +
-    '       Функция принимает на вход текст и ...спам - слова (переменное количество аргументов).\n' +
-    '       Определить по 5ти бальной шкале, как часто в тексте встречается спам.\n' +
-    '       Результат вернуть из функции.\n')
+let funcArr = [more18, less30];
 
-/* function spam (str, ...words) {
-
-         return str.includes('buy') || str.includes('discount');}
-
-
- let str = prompt('введите текст для проверки');
-
-let x = spam(str);
- x = false ? console.log('содержит спам') : console.log('не содержит спам')*/
-
-function spam(str, ...words) {
-
-    let arr = str.split(' ');
-    var count = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === 'участия') {
-            count += 1;
+function ageResult(arr, num) {
+    for (let func of arr) {
+        if (arr[func] > num) {
+            return true;
+        }
+        else {
+            return false
         }
     }
-
-    return count;
 }
 
-let text = 'Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия. Равным образом консультация с широким активом требуют определения и уточнения модели развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры играет важную роль в формировании существенных финансовых и административных условий.\n' +
-    'Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.\n' +
-    'С другой стороны рамки и место обучения кадров способствует подготовки и реализации модели развития. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.';
-let result = spam(text);
-/*console.log(result);
-console.log(`это длина строки`);*/
+let xAge = Math.floor(Math.random() * 100);
+
+console.log(ageResult(funcArr, xAge));
+console.log(xAge);
+
+
+}
+
 
 
