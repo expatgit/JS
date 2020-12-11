@@ -1,6 +1,6 @@
 'use strict';
 {
-   /* function getCats() {
+    function getCats() {
         return [
             {
                 "name": "Люся",
@@ -28,10 +28,10 @@
             }
         ];
     }
+console.log(getCats());
 
+    /*for (let i = 0; i < getCats().length; i++) {
 
-    for (let i = 0; i < getCats().length; i++) {
-        let bigSection = document.createElement("section");
         //bigSection.classList.add(`cats + ${i}`);
         bigSection.innerText = '...';
         document.body.append(bigSection);
@@ -42,6 +42,8 @@
     function generateCards(catInfo) {
         let cats = getCats();
         for (let elem of cats) {
+            let bigSection = document.createElement("section");
+            bigSection.innerText = '...';
             let card = document.createElement("div");
             card.classList.add("cats");
             let title = document.createElement('p');
@@ -59,7 +61,25 @@
         }
 
     }*/
+
+    function generateCatsCards(catInfo) {
+        let cats = getCats();
+        for (let cat of cats) {
+            let section = document.createElement('section');
+            let div = document.createElement('div');
+            let spanName = document.createElement('span');
+            spanName.innerText = cat.name;
+            let spanAge = document.createElement('span');
+            spanAge.innerText = cat.age;
+            div.append(spanName, spanAge);
+            section.append(catInfo);
+            return cat.name;
+        }
+
+    }
+   generateCatsCards(document.querySelector("section"));
 }//block end
+/*
 
 {
 
@@ -132,4 +152,4 @@
 
 
 
-}
+}*/

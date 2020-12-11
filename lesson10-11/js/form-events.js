@@ -39,6 +39,24 @@ for (let lang of langArr){
     if (lang.checked) console.log(lang.value);
 
 }
+let countries = form.elements.countries;
+console.log(countries);
 
+for (let elem of countries){
+    if (elem.selected) console.log(elem.value);
+}
 
+form.addEventListener("submit", takeForm);
 
+// у события submit есть обработчик по умолчанию - отправка данных на сервер
+
+function takeForm (event) {
+    event.preventDefault();//отмена отправки данных на сервер
+    console.log("takeForm");
+    console.log(this.elements.login.value)
+}
+// отправка даных
+let formData = new formData(this);
+
+//отправка данных с перезагрузкой
+this.submit;
